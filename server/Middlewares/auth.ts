@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken"
+require('dotenv').config();
 import secure from "../config"
-const secretKey = secure.secretKey;
+
 import {Request,Response,NextFunction} from "express"
 interface user{
   username:string,
@@ -8,14 +9,14 @@ interface user{
 }
 export const generateJwt = (user:user) => {
   const payload = {username:user.username};
-  return jwt.sign(payload, secretKey, { expiresIn: '1h' });
+  return jwt.sign(payload, process.env.secretkey, { expiresIn: '1h' });
 };
 
 export const authenticateJwt = (req:Request, res:Response, next:NextFunction) => {
   const authHeader=req.headers.authorization;
   if (authHeader) {
     const token = authHeader.split(' ')[1];
-    jwt.verify(token, secretKey, (err, user) => {
+    jwt.verify(token, process.env.secretkey, (err, user) => {
       
       if (err) {
         return res.sendStatus(403);
