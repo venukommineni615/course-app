@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import { useState } from 'react';
 import axios from "axios";
+import React from "react"
 import { useNavigate } from 'react-router-dom';
 export default function SignUp(){
     const navigate=useNavigate()
@@ -33,7 +34,7 @@ export default function SignUp(){
         <br />
         <Button 
         variant="contained"
-        sized="large"
+        size="large"
         onClick={async()=>
         {try{
 
