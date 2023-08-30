@@ -10,7 +10,7 @@ config.js
 config.ts
 environment.d.ts
 node_modules
-dist
+
 dist-ssr
 .env
 *.local
