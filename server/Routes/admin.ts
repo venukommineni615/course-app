@@ -1,5 +1,5 @@
 import express from "express"
-import mongoose from "mongoose";
+
 import {admin,course} from "../DB/index"
 import {generateJwt,authenticateJwt} from "../Middlewares/auth"
 import {Request,Response,NextFunction} from "express"

@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken"
-const secretKey = "superS3cr3t1";
+import secure from "../config"
+const secretKey = secure.secretKey;
 import {Request,Response,NextFunction} from "express"
 interface user{
   username:string,

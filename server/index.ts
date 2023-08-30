@@ -1,4 +1,5 @@
 import express from 'express';
+import secure from "./config"
 const app = express();
 const cors=require("cors")
 import mongoose from "mongoose"
@@ -8,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/admin",adminRouter)
 app.use("/users",userRouter)
-mongoose.connect('mongodb+srv://venukommineni615:9963676437kVmm@cluster0.48jxaze.mongodb.net/Course',{})
+mongoose.connect(secure.mongoURI,{})
 app.listen(3000, () => {
   console.log('Server is listening on port 3000');
-});
+})
