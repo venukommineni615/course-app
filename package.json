@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "install-server": "cd server && npm install",
-    "start-server": "cd server && node index.js",
+    "start-server": "cd server && node dist/index.js",
     "install-client": "cd Course-app && npm install",
     "build-client": "cd Course-app && npm run build",
     "start-client": "cd Course-app && npm run start"
