@@ -1,0 +1,16 @@
+{
+  "name": "course-app-fullstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "cd server && npm install",
+    "start-server": "cd server && node app.js",
+    "install-client": "cd Course-app && npm install",
+    "build-client": "cd Course-app && npm run build",
+    "start-client": "cd Course-app && npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

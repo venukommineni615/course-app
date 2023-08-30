@@ -5,6 +5,7 @@ const cors=require("cors")
 import mongoose from "mongoose"
 import adminRouter from "./Routes/admin"
 import userRouter from "./Routes/user"
+
 app.use(cors());
 app.use(express.json());
 app.use("/admin",adminRouter)
