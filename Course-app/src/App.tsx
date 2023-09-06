@@ -11,6 +11,7 @@ import SignUp from './components/signup'
 import NavBar from './components/navbar'
 import Course from './components/Course'
 import Courses from './components/Courses'
+import LandingPage from './components/landingPage'
 
 import Updatecourse from './components/UpdateCourses'
 import { BrowserRouter as Router, Route, Routes,  } from 'react-router-dom'
@@ -26,6 +27,7 @@ function App() {
       <NavBar/>
       <Init></Init>
         <Routes>
+          <Route path='/' element={<LandingPage/>}/>
           <Route path='/signup' element={<SignUp/>}/>
           <Route path='/signin' element={<SignIn/>}/>
           <Route path='/course' element={<Course/>}/>
