@@ -14,6 +14,7 @@ app.use(cors());
 app.use(express_1.default.json());
 app.use("/admin", admin_1.default);
 app.use("/users", user_1.default);
+console.log(process.env.mongoURI);
 mongoose_1.default.connect(process.env.mongoURI, {});
 app.listen(3000, () => {
     console.log('Server is listening on port 3000');
