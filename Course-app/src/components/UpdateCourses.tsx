@@ -2,14 +2,17 @@ import { useParams } from 'react-router-dom'
 import axios from "axios"
 import { useEffect, useState} from 'react'
 import { useNavigate } from 'react-router-dom'
+import React from "react"
+
 export default function Updatecourse(){
     const [title,setTitle]=useState('')
         const [description,setDescription]=useState('')
         const [image,setImage]=useState('')
         const [price,setPrice]=useState('')
-    let {courseId}=useParams()
+    
+    let {courseId}=useParams<{ courseId?: string }>()
     useEffect(()=>{
-        axios.get('http://localhost:3000/admin/course/'+courseId,{
+        axios.get('https://course-app-z6ch.onrender.com/admin/course/'+courseId,{
             headers:{
                 "Authorization":localStorage.getItem("token")
             }
@@ -52,7 +55,20 @@ export default function Updatecourse(){
 
     )
 }
-function EditCourse({title,setTitle,description,setDescription,image,setImage,price,setPrice,courseId}){
+interface objects{
+title:string,
+
+description:string,
+setDescription:Function,
+image:string,
+setImage:Function,
+setTitle:Function,
+price:string,
+setPrice:Function,
+courseId:string|undefined
+
+}
+function EditCourse({title,setTitle,description,setDescription,image,setImage,price,setPrice,courseId}:objects){
         const navigate=useNavigate()
         return(
             <div className="flex justify-center">
@@ -79,7 +95,7 @@ function EditCourse({title,setTitle,description,setDescription,image,setImage,pr
                     type="text" name="price" id="price" className="m-2 border-2 rounded-md outline-blue-400 p-2 hover:border-blue-200" placeholder="Price"/>
                     <button 
                     onClick={async()=>{
-                        const update=await axios.put("http://localhost:3000/admin/courses/"+courseId,{title:title,
+                        const update=await axios.put("https://course-app-z6ch.onrender.com/admin/courses/"+courseId,{title:title,
                         description:description,
                         image:image,
                         price:price

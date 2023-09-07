@@ -39,7 +39,7 @@ export default function Courses(){
     const [Data,setData]=useState([])
     useEffect(()=>{
         const token=localStorage.getItem("token")
-        fetch("http://localhost:3000/admin/courses",
+        fetch("https://course-app-z6ch.onrender.com/admin/courses",
         {method:"GET",
             headers:{
                 "Authorization":`${token}`

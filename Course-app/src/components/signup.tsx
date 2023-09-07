@@ -38,7 +38,7 @@ export default function SignUp(){
         onClick={async()=>
         {try{
 
-            const res=await axios.post("http://localhost:3000/admin/signup",{
+            const res=await axios.post("https://course-app-z6ch.onrender.com/admin/signup",{
                 username:userName,
                 password:password
             }

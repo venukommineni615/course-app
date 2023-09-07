@@ -1,5 +1,4 @@
 import express from 'express';
-import secure from "./config"
 const app = express();
 const cors=require("cors")
 import mongoose from "mongoose"

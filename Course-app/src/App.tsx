@@ -48,7 +48,7 @@ export default App
   const setUser = useSetRecoilState(userState)
     useEffect(()=>{
       const token=localStorage.getItem("token")
-      fetch("http://localhost:3000/admin/get/me",{
+      fetch("https://course-app-z6ch.onrender.com/admin/get/me",{
         headers:{
           "Authorization":`${token}`
         }

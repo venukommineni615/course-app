@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken"
 require('dotenv').config();
-import secure from "../config"
+
 
 import {Request,Response,NextFunction} from "express"
 interface user{
