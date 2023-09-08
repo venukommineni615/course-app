@@ -46,14 +46,14 @@ export default function SignIn(){
                 headers:{
                     "Content-Type":"application/json"
                 }
-            }).then((res) => res.json()).then(data => {console.log(data);
+            }).then((res) => res.json()).then(data => {
                 if(data.token){
                     navigate('/courses')
                 }
                 else{
                     alert(data.message)
                 }
-            localStorage.setItem("token","Bearer "+data.token)}).catch(error => console.log("THIS IS THE ERROR "+error))
+            localStorage.setItem("token","Bearer "+data.token)}).catch(error => console.log("THIS IS THE ERROR: "+error))
             
             
         }}

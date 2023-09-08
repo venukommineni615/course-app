@@ -24,8 +24,9 @@ function App() {
     <RecoilRoot>
 
     <Router>
+    <Init></Init>
       <NavBar/>
-      <Init></Init>
+      
         <Routes>
           <Route path='/' element={<LandingPage/>}/>
           <Route path='/signup' element={<SignUp/>}/>
@@ -44,7 +45,7 @@ function App() {
 export default App
 
 
- function Init(){
+export function Init(){
   const setUser = useSetRecoilState(userState)
     useEffect(()=>{
       const token=localStorage.getItem("token")
