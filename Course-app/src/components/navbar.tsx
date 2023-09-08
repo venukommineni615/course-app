@@ -28,7 +28,7 @@ export default function NavBar(){
                 <button  className="text-white p-2 font-medium text-sm mr-4 hover:font-bold mx-1" 
                 onClick={()=>{
                     if(user){
-                        window.location.href="/signup"
+                        window.location.href="/"
                         localStorage.clear()
                     }
                     else{
