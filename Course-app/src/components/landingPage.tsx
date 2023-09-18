@@ -10,7 +10,6 @@ export default function LandingPage(){
     const user=useRecoilValue(userState)
     let addCourse=()=>{
         if(user){
-
             Navigate("/course")
         }
         else{
@@ -19,7 +18,6 @@ export default function LandingPage(){
     }
    let handleClick=()=>{
     if(user){
-
         Navigate("/courses")
     }
     else{

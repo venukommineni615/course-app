@@ -36,7 +36,7 @@ export default function Course(){
                         'Content-Type': 'application/json',
                         'Authorization': `${token}`,
                       };
-                    fetch("http://localhost:3000/admin/course",
+                    fetch("https://course-app-z6ch.onrender.com/admin/course",
                     {method:"POST",
                      body:JSON.stringify({
                         title:title,

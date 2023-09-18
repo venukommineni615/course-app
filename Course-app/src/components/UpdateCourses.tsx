@@ -103,7 +103,7 @@ function EditCourse({title,setTitle,description,setDescription,image,setImage,pr
                     {headers:{
                         "Authorization":localStorage.getItem("token")
                     }});
-                        alert(update)
+                        console.log(update)
                         navigate("/courses")
                     }}
     
